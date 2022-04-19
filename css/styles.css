@@ -22,6 +22,8 @@ a:link {
   display: inline-block;
   padding: 20px 20px;
   color: #cbcbcb;
+  /* max-width: 150px; */
+  /* тогда нужно подфиксить голубизну выделения ссылки */
 }
 
 .menu__item {
@@ -54,8 +56,13 @@ a:link {
   border: 1px solid #0082e7;
 }
 
+.burger a:not(:last-child):after {
+  content: " +";
+}
+
 .submenu__item a {
   display: inline-block;
+  box-sizing: border-box;
   margin: 0;
   padding: 20px 20px;
   width: 100%;
